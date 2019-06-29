@@ -1,0 +1,22 @@
+<% include ./partials/header %>
+
+ <div class="ui main text container segment">
+ 	<div class="ui huge header" style="text-align:center;">Yemek Guncelleme Formu <br> <i><%=yemek.baslik%></i></div>
+ 		<form class="ui form" action="/yemekler/<%=yemek._id%>?_method=PUT" method="POST">
+ 			<div class="field">
+ 				<label>Baslik</label>
+ 				<input type="text" name="yemek[baslik]" value="<%=yemek.baslik%>">
+ 			</div>
+ 			<div class="field">
+ 				<label>Resim URL</label>
+ 				<input type="text" name="yemek[resim]" value="<%=yemek.resim%>">
+ 			</div>
+ 			<div class="field">
+ 				<label>Yemek Aciklamasi</label>
+ 				<textarea name="yemek[govde]" cols="30" rows="10" ><%=yemek.govde%></textarea>
+ 			</div>
+ 			<input class="ui blue basic button" type="submit" value="Kaydet">
+ 		</form>
+ </div>
+
+ <% include ./partials/footer %>

@@ -1,0 +1,19 @@
+i.icon{
+	font-size: 2em;
+}
+
+.container.main{
+	margin-top: 7.0em;
+}
+
+.showResim{
+	width:100%;
+	border:solid 2px red;
+}
+
+.yukari {
+	margin-top: 5rem;
+}
+.silButon{
+	display: inline;
+}

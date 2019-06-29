@@ -1,0 +1,35 @@
+
+<% include ./partials/header %>
+
+<p class="yukari"></p>
+<div class="ui main text contanier">
+	<div class="ui huge header">Yemek Sitesi RESTful Uygulamasi</div>
+	<div class="ui top attached segment">
+		<div class="ui divided items">
+			<% yemekler.forEach( (yemek)=>{ %>
+				<div class="item">
+					<div class="image">
+						<img src=" <%= yemek.resim %>" alt="<%= yemek.baslik %>">
+					</div>
+					<div class="content">
+						<a href="/yemekler/<%= yemek._id %>" class="header"><%= yemek.baslik %></a>
+						<div class="meta">
+							<%= yemek.olusturmaZamani.toDateString() %> <br>
+						</div>
+						<div class="description">
+							<%- yemek.govde.substring(0,100) %>... 	<br>
+						</div>
+						<div class="extra">
+							<a class="ui floated basic blue button" href="/yemekler/<%= yemek._id %>">
+								Daha Fazla
+								<i class="right chevron icon"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			<%  }) %>
+		</div>
+	</div>
+</div>
+
+<% include ./partials/footer %>
